@@ -111,9 +111,65 @@ body{
     margin-top: 0;
 }
 .output_text p{
-    overflow-x: hidden;
+    overflow: hidden;
     margin-top: 0;
 }
+/* TABLET */
+@media (min-width: 768px){
 
+    .process_btn >*{
+        width: 49%;
+    }
+  }
+  /* PC */
+  @media (min-width: 1024px) {
+    .website{
+        padding: 2rem;
+        grid-template: 80px 1fr/75% 25%;
+        grid-template-areas: 
+        "head output"
+        "input output"
+        "process output";
+    }
+    .input,
+    .process{
+        margin-inline: 15%;
+    }
+    .process{
+        margin-bottom: 2rem;
+    }
+    .process_btn :nth-child(2):hover{
+        background-color: #D8DFE8;
+        color: #000000;
+    }
+    .output_message,
+    .output_text{
+        padding-inline: 0.5rem;
+    }
+    .output_message h2{
+        margin-block: 1rem;
+    }
+    .output{
+        margin: 0 0 0 1rem;
+        justify-content: center;
+    }
+    .output_img{
+        max-width: 100%;
+    }
+    .output_text p{
+        margin-top: 1rem;
+    }
+    .text{
+        overflow: hidden;
+        font-size: 1.5rem;
+    }
+    .output_btn{
+        margin-bottom: 1rem;
+    }
+    .output_text_after{
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+  }
   
 
