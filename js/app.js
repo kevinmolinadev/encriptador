@@ -4,7 +4,7 @@ const desencriptar = document.getElementById("desencriptar");
 const salida = document.getElementById("salida");
 const salidaOriginal = salida.innerHTML;
 
-texto.addEventListener("input",()=>{
+texto.addEventListener("input", () => {
     texto.value = texto.value.replace(/[^a-zñ0-9\s]/g, "");
 })
 
@@ -45,5 +45,21 @@ desencriptar.addEventListener("click", () => {
 const Copiar = () => {
     const texto = document.getElementById("textResult");
     navigator.clipboard.writeText(texto.textContent);
-    alert("Texto copiado")
+    Message();
+}
+
+const Message = () => {
+    const message = `
+    <div class="copy flex">
+        <div class="copy_message">
+            <h3>Texto copiado con exito!</h3>
+        </div>
+    </div>
+    `;
+    const messageDiv = document.createElement('div');
+    messageDiv.innerHTML = message
+    document.body.appendChild(messageDiv);
+    setTimeout(() => {
+        messageDiv.style.display = 'none';
+    }, 2000)
 }
