@@ -41,3 +41,9 @@ desencriptar.addEventListener("click", () => {
         salida.innerHTML = salidaOriginal;
     }
 });
+
+const Copiar = () => {
+    const texto = document.getElementById("textResult");
+    navigator.clipboard.writeText(texto.textContent);
+    alert("Texto copiado")
+}
