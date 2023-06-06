@@ -42,6 +42,19 @@ body {
     grid-area: head;
 }
 
+.head_content{
+    height: 100%;
+    justify-content: space-between;
+}
+.head_content > img:nth-child(1){
+    height: 60%;
+    align-self: center;
+}
+.head_content > img:nth-child(2){
+    height: 150%;
+    align-self: center;
+}
+
 .input {
     grid-area: input;
     justify-content: center;
